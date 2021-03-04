@@ -11,8 +11,6 @@ function loading() {
   quoteContainer.hidden = true;
 }
 
-
-
 /* Hide Loading */
 function complete() {
   if (!loader.hidden) {
@@ -30,7 +28,6 @@ async function getQuote() {
   try {
     const response = await fetch(proxyUrl + apiURL);
     const data = await response.json();
-    console.log(data);
     /* if author is blank, add 'unknown' */
     if (data.quoteAuthor === "") {
       authorText.innerText = "Unknown";
